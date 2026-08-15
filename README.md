@@ -2,24 +2,24 @@
 
 Học kỳ 3, Năm học: 2025-2026
 
-**Họ tên**: ...
+**Họ tên**: Trần  Nguyễn Đông  Duy
 
-**MSSV**: ...
+**MSSV**: DC25V7K004
 
-**Lớp HP**: ...
+**Lớp HP**: CT275
 
 
 
 ## Triển khai trên nginx
 
 ```
-# D:/Servers/nginx/conf/nginx.conf
+# C:/nginx-1.31.3/conf/nginx.conf
 
 server {
 	listen       80;
 	server_name  ct275-lab2.localhost;
 
-	root "D:/mysites/lab2/public";
+	root "D:/LienThong/HK4_2025_2026/Cong_Nghe_WEB/LAB_2/mysites/CT275DC01-lab2/public";
 	index index.php;
 
 	charset utf-8;

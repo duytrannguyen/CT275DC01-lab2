@@ -1,51 +1,302 @@
 @charset "utf-8";
-/* CSS Coded and Designed by Nathan Chapman */
-/* from Pixl Design - http://pixl.utopiaplanitia.org */
 
-/* --------- RESET --------- */
-/* Don't forget to set a foreground and background color
-   on the 'html' or 'body' element! */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dd,dl,dt,li,ol,ul,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{ margin:0; padding:0; border:0; font-weight:inherit; font-style:inherit; font-size:100%; line-height:1.2; font-family:Geneva, Arial, Helvetica, sans-serif; text-align:left; vertical-align:baseline; }
-a img,:link img,:visited img{ border:0; }
-table{  border-collapse:collapse; border-spacing:0; }
-ol,ul{ list-style:none; }
-q:before,q:after,blockquote:before,blockquote:after{ content:""; }
+:root {
+  --bs-primary: #176b77;
+  --bs-primary-rgb: 23, 107, 119;
+  --bs-success: #237a4b;
+  --bs-success-rgb: 35, 122, 75;
+  --bs-danger: #c73535;
+  --bs-danger-rgb: 199, 53, 53;
+  --bs-warning: #f2b84b;
+  --bs-warning-rgb: 242, 184, 75;
+  --app-bg: #f3f6f8;
+  --app-border: #d9e2ea;
+  --app-muted: #697586;
+  --app-text: #263241;
+}
 
-/* --------- Universal --------- */
-body{ background:#fefefe;  color:#AAA;  }
+* {
+  box-sizing: border-box;
+}
 
-/* --------- Links --------- */
-a:link,a:visited{ text-decoration:none; color:#666; border-bottom:1px #999 dashed; }
-a:hover,a:active{ color:#333; border-bottom:1px #333 solid; }
+html {
+  font-size: 11px;
+}
 
-/* --------- Layout --------- */
-#container{ margin:20px auto 30px; width:65%; }
-#footer{ color:#999; font-size:75%; margin-bottom:50px; text-align:center; }
+body {
+  height: 100vh; overflow: hidden;
+  margin: 0;
+  color: var(--app-text);
+  background: var(--app-bg);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
 
-/* --------- Header Tags --------- */
-h1,h2,h3,h4,h5,h6{ color:#999; font-weight:bolder; padding:10px 15px 0px 15px; }
-h1{ font-size:36px; }
-h2{ font-size:24px; }
-h3{ font-size:18px; }
-h4{ font-size:16px; }
-h5{ font-size:14px; }
-h6{ font-size:12px; }
+a:not(.btn) {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
 
-/* --------- Typography --------- */
-p{ font-size:medium; line-height:2; }
-ul,ol{ margin:25px; }
-ul li, ol li { padding-left:10px; }
-ul{ list-style:square inside; }
-ol{ list-style:decimal inside; }
-blockquote{ margin:15px; border-left:5px #FFDF00 solid; padding:7px; color:#999; font-style:italic; }
-pre { margin:10px; border-left:5px #FFDF00 double; padding:10px; font-family:"Courier New", Courier, monospace; }
+a:not(.btn):hover {
+  color: #0e4f58;
+  text-decoration: underline;
+}
 
-/* --------- Yellow Stops --------- */
-h1:after,h2:after,h3:after,h4:after,h5:after,h6:after,li:after{ content:"."; color:#FFDF00; font-family:Helvatica, Arial, sans-serif; }
-li:after{ font-size:24px; }
+.navbar {
+  padding: 0.35rem 0;
+}
 
-p { margin-top: 1em; }
+.navbar-brand {
+  font-size: 1rem;
+}
 
-.error {
-	color: red;
+.navbar .nav-link {
+  border-radius: 0.4rem;
+  padding: 0.35rem 0.6rem !important;
+}
+
+.navbar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.container {
+  max-width: 200px !important;
+}
+
+main.container {
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.1rem !important;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.card,
+.alert,
+.btn,
+.form-control,
+.form-select,
+.input-group-text,
+.badge {
+  border-radius: 0.5rem !important;
+}
+
+.card {
+  border: 1px solid var(--app-border) !important;
+  box-shadow: 0 8px 18px rgba(31, 41, 55, 0.06) !important;
+}
+
+.card-body {
+  padding: 0.2rem !important;
+}
+
+.card-header,
+.card-footer {
+  padding: 0.2rem 0.3rem !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 6px 16px rgba(31, 41, 55, 0.07) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+h1,
+.h1 {
+  font-size: 1.45rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.25rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.15rem;
+}
+
+h4,
+.h4,
+.alert-heading {
+  font-size: 1.05rem;
+}
+
+p,
+.form-text,
+small {
+  line-height: 1.45;
+}
+
+.text-muted,
+.form-text {
+  color: var(--app-muted) !important;
+}
+
+main .mb-4 {
+  margin-bottom: 0.2rem !important;
+}
+
+main .mt-4 {
+  margin-top: 0.25rem !important;
+}
+
+main .p-4,
+main .p-5,
+main .p-md-5 {
+  padding: 0.2rem !important;
+}
+
+main .py-4,
+main .py-5 {
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.row.g-3,
+.row.g-4 {
+  --bs-gutter-x: 0.5rem;
+  --bs-gutter-y: 0.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.btn-sm {
+  min-height: 1.5rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.btn-lg {
+  min-height: 2rem;
+  padding: 0.35rem 0.6rem;
+  font-size: 1rem;
+}
+
+.form-label {
+  margin-bottom: 0.15rem;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+  min-height: 1.25rem;
+  border-color: #cbd6e2;
+}
+
+textarea.form-control {
+  min-height: 3rem;
+  resize: vertical;
+}
+
+.form-text {
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+}
+
+.alert {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.badge {
+  padding: 0.25rem 0.5rem;
+  font-weight: 650;
+}
+
+.page-heading {
+  margin-bottom: 0.5rem;
+}
+
+.page-heading .card-body,
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.icon-circle {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle-lg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.option-box,
+.quote-preview,
+.meta-box {
+  padding: 0.5rem;
+  background: #f7fafc;
+  border: 1px solid #e6edf3;
+  border-radius: 0.5rem;
+}
+
+.blockquote {
+  margin: 0;
+  padding: 0.5rem 0.9rem;
+  color: #1f2937;
+  background: #fbfdff;
+  border-left: 0.25rem solid rgba(var(--bs-primary-rgb), 0.45);
+}
+
+.quote-text {
+  font-size: clamp(1.15rem, 2.4vw, 1.7rem);
+}
+
+.table-compact-card {
+  display: grid;
+  gap: 0.2rem;
+}
+
+#footer {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 11px;
+  }
+
+  main.container {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .page-heading .card-body,
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .btn-group {
+    display: grid;
+    width: 100%;
+  }
 }
