@@ -24,8 +24,7 @@ if (!$has_access) {
     if ($form_data["quote"] === "" || $form_data["source"] === "") {
         $error_message = "Hãy nhập đầy đủ trích dẫn và nguồn.";
     } else {
-        $query = 'INSERT INTO quotes (quote, source, favorite)
-                  VALUES (:quote, :source, :favorite)';
+        $query = 'INSERT INTO quotes (quote, source, favorite) VALUES (:quote, :source, :favorite)';
         try {
             $pdo = get_database_connection();
             $statement = $pdo->prepare($query);

@@ -13,23 +13,19 @@ function render_page_footer(bool $is_loggedin = false): void
             ): ?>
                 <div class="border-top pt-4 pb-3">
                     <div class="d-flex flex-wrap justify-content-center align-items-center gap-2">
-                        <a href="add_quote.php" 
-                           class="btn btn-sm btn-primary btn-sm px-3">
+                        <a href="add_quote.php"class="btn btn-sm btn-primary btn-sm px-3">
                             <i class="bi bi-plus-circle"></i>
                             Thêm Trích dẫn
                         </a>
-                        <a href="view_quotes.php" 
-                           class="btn btn-sm btn-outline-primary btn-sm px-3">
+                        <a href="view_quotes.php" class="btn btn-sm btn-outline-primary btn-sm px-3">
                             <i class="bi bi-card-list"></i>
                             Xem tất cả Trích dẫn
                         </a>
-                        <a href="search.php" 
-                           class="btn btn-sm btn-outline-secondary btn-sm px-3">
+                        <a href="search.php" class="btn btn-sm btn-outline-secondary btn-sm px-3">
                             <i class="bi bi-search"></i>
                             Tìm kiếm
                         </a>
-                        <a href="logout.php" 
-                           class="btn btn-sm btn-outline-danger btn-sm px-3">
+                        <a href="logout.php" class="btn btn-sm btn-outline-danger btn-sm px-3">
                             <i class="bi bi-box-arrow-right"></i>
                             Đăng xuất
                         </a>
@@ -38,18 +34,15 @@ function render_page_footer(bool $is_loggedin = false): void
             <?php else: ?>
                 <div class="border-top pt-4 pb-3">
                     <div class="d-flex flex-wrap justify-content-center align-items-center gap-2">
-                        <a href="/" 
-                           class="btn btn-sm btn-outline-primary btn-sm px-4">
+                        <a href="/" class="btn btn-sm btn-outline-primary btn-sm px-4">
                             <i class="bi bi-house"></i>
                             Trang chủ
                         </a>
-                        <a href="search.php" 
-                           class="btn btn-sm btn-outline-secondary btn-sm px-4">
+                        <a href="search.php" class="btn btn-sm btn-outline-secondary btn-sm px-4">
                             <i class="bi bi-search"></i>
                             Tìm kiếm
                         </a>
-                        <a href="login.php" 
-                           class="btn btn-sm btn-primary btn-sm px-4">
+                        <a href="login.php" class="btn btn-sm btn-primary btn-sm px-4">
                             <i class="bi bi-box-arrow-in-right"></i>
                             Đăng nhập
                         </a>
